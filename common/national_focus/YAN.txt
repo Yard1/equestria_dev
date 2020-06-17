@@ -35,6 +35,7 @@ focus_tree = {
 	shared_focus = YAN_navy_start
 	shared_focus = YAN_air1
 	shared_focus = YAN_a_new_day
+	shared_focus = YAN_identity1
 
 }
 
