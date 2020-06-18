@@ -16,6 +16,5 @@ jobs:
         BEFORE=$(cat "$GITHUB_EVENT_PATH" | jq -r '.before')
         echo "https://api.github.com/repos/$GITHUB_REPOSITORY/commits/$BEFORE"
         BEFORE_PAYLOAD=$(curl -H "Authorization: token $GITHUB_TOKEN" -i "https://api.github.com/repos/$GITHUB_REPOSITORY/commits/$BEFORE")
-        echo "$BEFORE_PAYLOAD"
-        $BEFORE_PAYLOAD" | jq -r '.commit.committer.date'
+        "$BEFORE_PAYLOAD" | jq -r '.commit.committer.date'
 
