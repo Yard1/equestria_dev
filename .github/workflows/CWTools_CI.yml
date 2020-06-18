@@ -23,8 +23,9 @@ jobs:
         echo "Date of before commit $BEFORE: $BEFORE_DATE"
         git clone --progress --verbose --filter=blob:none --single-branch --shallow-since="$BEFORE_DATE" "https://github.com/$GITHUB_REPOSITORY.git" "$GITHUB_WORKSPACE"
         cd $GITHUB_WORKSPACE
-    - uses: actions/checkout@v1
-      if: github.event_name != 'push'
+    - name: Checkout whole repo
+      if: github.event_name == 'pull_request'
+      uses: actions/checkout@v1
     - uses: cwtools/cwtools-action@v1.0.0
       with:
         game: hoi4
