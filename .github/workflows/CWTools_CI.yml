@@ -18,7 +18,7 @@ jobs:
         BEFORE_PAYLOAD=$(curl -H "Authorization: token $GITHUB_TOKEN" "https://api.github.com/repos/$GITHUB_REPOSITORY/commits/$BEFORE")
         BEFORE_DATE=$(jq -r '.commit.committer.date' <<< "$BEFORE_PAYLOAD")
         echo "$BEFORE_DATE"
-        git clone -progress --verbose --single-branch --shallow-since="$BEFORE_DATE" "https://github.com/$GITHUB_REPOSITORY.git" "$GITHUB_WORKSPACE"
+        git clone --progress --verbose --single-branch --shallow-since="$BEFORE_DATE" "https://github.com/$GITHUB_REPOSITORY.git" "$GITHUB_WORKSPACE"
         cd $GITHUB_WORKSPACE
         ls
     - uses: cwtools/cwtools-action@v1.0.0
