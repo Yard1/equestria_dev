@@ -282,8 +282,31 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = Indozeeb.13.a
-		add_ideas = { YAN_Zavanese_Families1 }
+		hidden_effect = {
+			YAN = {
+				country_event = {id = Indozeeb.131 hours = 6}
+			}
+		}
 	}
+}
+
+country_event = {
+	id = Indozeeb.131
+	immediate = {log="[GetDateText]: [Root.GetName]: event Indozeeb.131"}
+	title = Indozeeb.131.t
+	desc = Indozeeb.131.d
+	#picture = 
+	is_triggered_only = yes
+	option = {
+		name = Indozeeb.131.a
+		add_ideas = { YAN_Zavanese_Families1 }
+		hidden_effect = {
+			YAN = {
+				country_event = {id = Indozeeb.131 hours = 6}
+			}
+		}
+	}
+
 }
 
 country_event = {

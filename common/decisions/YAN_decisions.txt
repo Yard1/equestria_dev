@@ -525,3 +525,43 @@ YAN_loterijen_fucks_the_natives_category = {
 
 
 }
+
+YAN_agressive_business_tactics  = {
+	DEL_investment_civ = {
+		visible = {
+			DEL = {
+				has_country_flag = YAN_accepted_business
+			}
+		}
+
+		cost = 30
+		days_remove = 14
+
+		complete_effect = {
+			poltiical_power_gain = -0.05
+		}
+
+		remove_effect = {
+			DEL = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = DEL
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+
+		}
+	}
+
+	
+}

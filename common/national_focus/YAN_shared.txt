@@ -1839,6 +1839,11 @@ shared_focus = {
 	prerequisite = {
 		focus = YAN_agressive_business_tactics
 	} 
+	available = {
+		FEA = {
+			exists = yes
+		}
+	}
 	ai_will_do = {
 		factor = 129
 	}
@@ -1846,6 +1851,25 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: focus YAN_feathisia_business"
 		country_event = { id = Indozeeb.26 days = 3}
 	}
+}
+
+shared_focus = {
+	id = YAN_continued_investments
+	#icon = 
+	x = 11
+	y = 12
+	cost = 10
+	prerequisite = {
+		focus = YAN_agressive_business_tactics
+	}
+	ai_will_do = {
+		factor = 129
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus YAN_continued_investments"
+		set_country_flag = YAN_neocolonialism
+	}
+
 }
 
 ###Loterijen's Getting an Identity Tree###
