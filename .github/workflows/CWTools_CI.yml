@@ -8,6 +8,8 @@ on:
 jobs:
   cwtools_job:
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
     - name: Clone from last commit
       run: |
