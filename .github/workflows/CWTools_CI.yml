@@ -10,9 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      EVENT: ${{ github.event }}
     steps:
     - name: Get date of last commit
       run: |
-        sudo apt-get update && sudo apt-get install jq
-        echo ${{github.event}} | jq '.before'
+        echo "$EVENT"
+        echo "$EVENT" | jq '.before'
 
