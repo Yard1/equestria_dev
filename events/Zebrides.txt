@@ -905,6 +905,61 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = YANbusiness.11 #Nation Accepted Further Investment
+	log = "[GetDateText]: [Root.GetName]: event YANbusiness.11"
+	title = YANbusiness.11.t
+	desc = YANbusiness.11.d
+	#picture = 
+	is_triggered_only = yes
+	option = {
+		name = YANbusiness.11.a
+		set_country_flag = YAN_accepted_colonialism
+		hidden_effect = {
+			YAN = {
+				country_event = { YANbusiness.12 hours = 6}
+			}
+		}
+
+	}
+	option = {
+		name = YANbusiness.11.b
+		set_country_flag = YAN_declined_colonialism
+		hidden_effect = {
+			YAN = {
+				country_event = { YANbusiness.13 hours = 6}
+			}
+		}
+
+	}
+}
+
+country_event = {
+	id = YANbusiness.12
+	log = "[GetDateText]: [Root.GetName]: event YANbusiness.2"
+	title = YANbusiness.12.t
+	desc = YANBusiness.12.d
+	#picture = 
+	is_triggered_only = yes
+	option = {
+		name = YANbusiness.12.a
+		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = YANbusiness.13
+	log = "[GetDateText]: [Root.GetName]: event YANbusiness.3"
+	title = YANbusiness.13.t
+	desc = YANbusiness.13.d
+	#picture = 
+	is_triggered_only = yes
+	option = {
+		name = YANbusiness.13.a
+		add_political_power = -10
+	}
+}
+
 
 ###Uprising Nipped in the Bud Event###
 country_event = {

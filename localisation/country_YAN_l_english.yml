@@ -401,13 +401,28 @@ Indozeeb.182.d:0 "For all his semmingly noble dealings, Lord Kepleon is a landlo
  YANbusiness.1.a:0 "" #yes
  YANbusiness.1.b:0 "" #no
 
- YANbusiness.2.t:0 "They Declined!"
+ YANbusiness.2.t:0 "They Accepeted!"
  YANbusiness.2.d:0 ""
  YANbusiness.2.a:0 ""
 
- YANbusiness.3.t:0 ""
+ YANbusiness.3.t:0 "Declined!"
  YANbusiness.3.d:0 ""
  YANbusiness.3.a:0 ""
+
+ YANbusiness.11.t:0 "Further Colonialism?" #PErmission for more investments
+ YANbusiness.11.d:0 ""
+ YANbusiness.11.a:0 ""
+ YANbusiness.11.b:0 ""
+
+ YANbusiness.12.t:0 "They Accepeted!"
+ YANbusiness.12.d:0 ""
+ YANbusiness.12.a:0 ""
+
+ YANbusiness.13.t:0 "Declined!"
+ YANbusiness.13.d:0 ""
+ YANbusiness.13.a:0 ""
+
+
 
 
  Indozeeb.99.t:0 "Nipped in the Bud"
