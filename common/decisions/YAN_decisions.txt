@@ -532,13 +532,17 @@ YAN_agressive_business_tactics  = {
 			DEL = {
 				has_country_flag = YAN_accepted_business
 			}
+			YAN = {
+				has_country_flah = YAN_neocolonialism
+			}
+
 		}
 
 		cost = 30
 		days_remove = 14
 
 		complete_effect = {
-			poltiical_power_gain = -0.05
+			political_power_gain = -0.05
 		}
 
 		remove_effect = {
@@ -561,6 +565,7 @@ YAN_agressive_business_tactics  = {
 				}
 
 			}
+			add_opinion_modifier = { tag = DEL modifier = small_increase}
 			YAN = {
 				set_country_flag = YAN_invest_del_civ
 			}
@@ -572,13 +577,17 @@ YAN_agressive_business_tactics  = {
 			DEL = {
 				has_country_flag = YAN_accepted_business
 			}
+			YAN = {
+				has_country_flah = YAN_neocolonialism
+			}
+
 		}
 
 		cost = 15
 		days_remove = 7
 
 		complete_effect = {
-			poltiical_power_gain = -0.10
+			political_power_gain = -0.10
 		}
 
 		remove_effect = {
@@ -598,6 +607,8 @@ YAN_agressive_business_tactics  = {
 					instant_build = yes
 				}
 			}
+			add_opinion_modifier = { tag = DEL modifier = small_increase}
+
 			YAN = {
 				set_country_flag = YAN_invest_del_infra
 			}
@@ -610,13 +621,16 @@ YAN_agressive_business_tactics  = {
 			DEL = {
 				has_country_flag = YAN_accepted_business
 			}
+			YAN = {
+				has_country_flag = YAN_neocolonialism
+			}
 		}
 
 		cost = 15
 		days_remove = 7
 
 		complete_effect = {
-			poltiical_power_gain = -0.10
+			political_power_gain = -0.10
 		}
 
 		remove_effect = {
@@ -627,7 +641,131 @@ YAN_agressive_business_tactics  = {
 
 	}
 
-	
+	DEL_intense_colonialism = {
+		visible = {
+			DEL = {
+				has_country_flag = YAN_accepeted_colonialism
+			}
+		}
+		cost = 50
+		day_remove = 60
+		complete_effect = {
+			political_power_gain = -0.10
+		}
+		remove_effect = {
+			DEL = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+							}
+						is_core_of = DEL
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+
+			}
+			add_opinion_modifier = { tag = DEL modifier = medium_increase}
+			YAN = {
+				set_country_flag = YAN_DEL_check1
+			}
+
+		}
+	}
+
+	DEL_investment_infra_large = {
+		visible = {
+			DEL = {
+				has_country_flag = YAN_accepeted_colonialism
+			}
+		}
+
+		cost = 50
+		days_remove = 60
+
+		complete_effect = {
+			political_power_gain = -0.20
+		}
+
+		remove_effect = {
+			DEL = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+							include_locked = yes
+						}
+					is_core_of = DEL
+					}	
+					add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+							include_locked = yes
+						}
+					is_core_of = DEL
+					}	
+					add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+							include_locked = yes
+						}
+					is_core_of = DEL
+					}	
+					add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+					}
+				}	
+
+			}
+			add_opinion_modifier = { tag = DEL modifier = medium_increase}
+			YAN = {
+				set_country_flag = YAN_DEL_check2
+			}
+
+		}
+	}
+
+	DEL_puppet = {
+		available = {
+			YAN = {
+				has_country_flag = YAN_DEL_check1
+			}
+			YAN = {
+				has_country_flag = YAN_DEL_check2
+			}
+		}
+		
+	}
+
+
+
+
 
 
 }
