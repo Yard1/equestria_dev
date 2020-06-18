@@ -13,9 +13,9 @@ jobs:
     steps:
     - name: Get date of last commit
       run: |
-        BEFORE=$(cat "$GITHUB_EVENT_PATH" | jq '.before')
+        BEFORE=$(cat "$GITHUB_EVENT_PATH" | jq -r '.before')
         echo "https://api.github.com/repos/$GITHUB_REPOSITORY/commits/$BEFORE"
         BEFORE_PAYLOAD=$(curl -H "Authorization: token $GITHUB_TOKEN" -i "https://api.github.com/repos/$GITHUB_REPOSITORY/commits/$BEFORE")
         echo "$BEFORE_PAYLOAD"
-        echo "$BEFORE_PAYLOAD" | jq '.committer.date'
+        echo "$BEFORE_PAYLOAD" | jq -r '.committer.date'
 
