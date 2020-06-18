@@ -15,3 +15,4 @@ jobs:
       run: |
         sudo apt-get update && sudo apt-get install jq
         echo ${{github.event}} | jq '.before'
+
